@@ -1,0 +1,23 @@
+{
+  "name": "simplewebserver",
+  "version": "1.0.0",
+  "description": "Simple Webserver",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server --proxy http://localhost:8080?"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kori2000/simplewebserver.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kori2000/simplewebserver/issues"
+  },
+  "homepage": "https://github.com/kori2000/simplewebserver#readme",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
+}

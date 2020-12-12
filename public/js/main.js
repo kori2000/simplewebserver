@@ -10,17 +10,17 @@ function loadXMLDoc() {
 
                 console.table(myArr)
 
-                document.getElementById("user_ip4").value = myArr.query                
-                document.getElementById("user_as").value = myArr.as
+                document.getElementById("user_ip4").value = myArr.ip                
+                document.getElementById("user_as").src = myArr.country_flag
 
                 document.getElementById("user_isp").value = myArr.isp
-                document.getElementById("user_org").value = myArr.org
+                document.getElementById("user_org").value = myArr.organization
 
-                document.getElementById("user_country").value = myArr.country + ", " + myArr.countryCode
-                document.getElementById("user_location").value = myArr.city + ", " + myArr.zip
+                document.getElementById("user_country").value = myArr.country_name + ", " + myArr.country_code2
+                document.getElementById("user_location").value = myArr.city + ", " + myArr.zipcode
 
-                document.getElementById("user_latlon").value = myArr.lat + " / " + myArr.lon
-                document.getElementById("user_tz").value = myArr.timezone
+                document.getElementById("user_latlon").value = myArr.latitude + " / " + myArr.longitude
+                document.getElementById("user_conti").value = myArr.continent_name + ", " + myArr.continent_code
             }
             else if (xmlhttp.status == 400) {
                 alert('There was an error 400')
@@ -31,6 +31,6 @@ function loadXMLDoc() {
         }
     }
 
-    xmlhttp.open("GET", "http://ip-api.com/json", true);
+    xmlhttp.open("GET", "https://api.ipgeolocation.io/ipgeo?apiKey=5170a77d753f4b81a9ad76f0dc7433c6", true);
     xmlhttp.send();
 }

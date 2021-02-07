@@ -2,6 +2,7 @@ version: '3.8'
 services:
 
   simplewebserver:
+    container_name: simplewebserver
     restart: always
     build:
       context: ./

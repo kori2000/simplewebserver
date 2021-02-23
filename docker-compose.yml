@@ -1,8 +1,8 @@
 version: '3.8'
 services:
 
-  simplewebserver:
-    container_name: simplewebserver
+  sws:
+    container_name: sws
     restart: always
     build:
       context: ./
